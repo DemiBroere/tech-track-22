@@ -11,12 +11,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
-const data = await request(CONFIG.url);
-
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
 
+async function start() {
+  const data = await request(CONFIG.url);
 
 // Cursor Tracker 
 
@@ -331,5 +330,5 @@ we want the tooltip to be next to the cursor, we add 15px. */
 
   // zoom functie 
   
-
-    console.log(allPlanets);
+}
+start();
