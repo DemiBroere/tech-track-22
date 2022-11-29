@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
+import all from 'gsap/all';
 
 async function start() {
   const data = await request(CONFIG.url);
@@ -91,7 +92,7 @@ function closeModal(modal) {
 // Filter function on keywords
 // https://dev.to/michelc/search-and-filter-a-table-with-javascript-28mi
 
-(function() {
+(function filter() {
   'use strict';
 
 
@@ -159,11 +160,11 @@ const allPlanets = data.bodies.map(i => {
         gravity: i.gravity,
         radius: i.equaRadius,
     }
+      
+  }).filter (i => {
+      return i.id; // because i want to return all id's within the API. 
+    })
     
-}).filter (i => {
-    return i.id; // because i want to return all id's within the API. 
-  })
-  
 /* 
     We generate to generate the table, and we start with selecting the table properties. 
 */
@@ -194,8 +195,9 @@ const allPlanets = data.bodies.map(i => {
 
 generateTable(allPlanetsTable);
 
+function showCommon() {
 
-/* 
+  /* 
 
    there was no data for the distances in the API, so I found my own data to use. Therefore there is a repetition of code. 
 
@@ -327,8 +329,20 @@ we want the tooltip to be next to the cursor, we add 15px. */
       return "url(#Uranus)";
     }
   })
+}
+showCommon();
+
+// All planets listed 
+
+function generatePlanets() {
+  
+}
+generatePlanets();
 
   // zoom functie 
+
+
   
+  /* END OF */
 }
 start();

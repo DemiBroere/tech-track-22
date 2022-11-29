@@ -1,4 +1,5 @@
-@import 'files/colors.scss', 'files/keyframes.scss';
+@import 'files/colors.scss';
+@import 'files/keyframes.scss';
 
 * {
   margin: 0;
@@ -205,14 +206,32 @@ section {
   width: 100%;
 }
 
-    #sunset {
-    position: absolute;
-    margin-top: 45em;
-    width: 100%;
-    height:100%;
-    background-color: yellow;
-    z-index: 0;
+/* SECOND */
+
+#boxplanets {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 45em;
+  padding-top: 10em;
+  width: 100%;
+  height:100%;
+  background-color: rgb(35, 35, 35);
+  z-index: 0;
 }
+
+  #box {
+    background-color: $color-alien;
+    backdrop-filter: blur(1.5px);
+    border: 2px solid $color-alien;
+    margin: 1em;
+  }
+
+  #planetsAll {
+    z-index: 9999;
+  }
 
 footer {
   position: fixed;
