@@ -1,11 +1,6 @@
-$color-white: rgb(255, 255, 255);
-$color-black: rgb(0, 0, 0);
-$color-alien: #fd7638;
-$color-table: rgb(211, 210, 206);
+@import 'files/colors.scss';
 
-
-
-/* the reason for using scale, is so you can transform it and make it scale in and out smoothly */
+/* the reason for using scale, is so you can transform it and make it scale in and out smoothly. */
 .modal {
     position: fixed;
     top: 50%;
@@ -24,7 +19,7 @@ $color-table: rgb(211, 210, 206);
 }
 
 .modal.active {
-    transform: translate(-50%, -50%) scale(1); /* scale makes it visible when active */
+    transform: translate(-50%, -50%) scale(1); /* this scale makes it visible when active */
 }
 
 .modal-header {

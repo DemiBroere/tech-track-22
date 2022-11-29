@@ -1,0 +1,39 @@
+@keyframes floatmore {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-5px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }  
+
+  @keyframes floatless {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-25px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  } 
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position: 100% 100%;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position: 200% 0;}
+}
+
+@keyframes textanimation {
+    to {
+      background-position: 200% center;
+    }
+  }

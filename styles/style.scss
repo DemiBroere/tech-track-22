@@ -1,8 +1,4 @@
-
-$color-white: rgb(255, 255, 255);
-$color-black: rgb(0, 0, 0);
-$color-alien: #fd7638;
-$color-table: rgb(211, 210, 206);
+@import 'files/colors.scss', 'files/animations.scss';
 
 * {
   margin: 0;
@@ -90,12 +86,6 @@ main {
          -webkit-text-fill-color: transparent;
          animation: textanimation 6s linear infinite;
          display: inline-block;
-       }
-       
-       @keyframes textanimation {
-         to {
-           background-position: 200% center;
-         }
        }
        
         h2 {
@@ -202,34 +192,12 @@ button {
 	}
 
   circle:nth-of-type(even) {
-    animation: float 8s ease-in-out infinite;
-      @keyframes float {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-5px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
-      }  
+    animation: floatmore 8s ease-in-out infinite;
   }
   
 
 circle:nth-of-type(odd) {
-  animation: float 10s ease-in-out infinite;
-    @keyframes float {
-      0% {
-        transform: translatey(0px);
-      }
-      50% {
-        transform: translatey(-25px);
-      }
-      100% {
-        transform: translatey(0px);
-      }
-    }  
+  animation: floatless 10s ease-in-out infinite; 
 }
 
 section {
