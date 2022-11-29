@@ -17,6 +17,7 @@ const data = await request(CONFIG.url);
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
 
+
 // Cursor Tracker 
 
 const tracker = document.querySelector(".tracker"); // Selects the tracker from the css. 
