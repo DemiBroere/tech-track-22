@@ -60,7 +60,7 @@ Local:   http://localhost:5173/
 ```
 
 ## Documentation 
-[ Process and journey can be found in my Wiki ](https://github.com/demibroere/tech-track-22/wiki)
+Process and journey can be found in my [ wiki ](https://github.com/demibroere/tech-track-22/wiki)
 
 ## Author
 **Author:** Demi Broere
