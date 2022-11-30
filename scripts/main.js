@@ -26,8 +26,8 @@ async function start() {
         id: i.id,
         englishName: i.englishName,
         bodyType: i.bodyType,
-        gravity: i.gravity,
-        radius: i.equaRadius,
+        gravity: i.gravity, 
+        radius: i.equaRadius
     }
       
   }).filter (i => {
