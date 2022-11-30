@@ -64,9 +64,7 @@ async function start() {
 
 generateTable(allPlanetsTable);
 
-function showCommon() {
-
-  // this is the data I want to use within the tooltip, when hovering over a planet.
+// this is the data I want to use within the tooltip, when hovering over a planet.
 
   const allPlanets = data.bodies.map(i => {
     return {
@@ -82,8 +80,9 @@ function showCommon() {
     return i.bodyType === "Planet";
   })
 
+function showCommon() {
 
-//  there was no data for the distances in the API, so I found my own data to use. Therefore there is a repetition of code. 
+//  there was no data for the distances in the API, so I found my own data to use.
 
 const planetData = [{
   // Mercury
