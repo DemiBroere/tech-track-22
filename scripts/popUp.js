@@ -1,11 +1,4 @@
-
-// POP UP CODE 
-
-/* 
-
-This code is approached as if there are going to be multiple buttons and multiple ways ( queryselectorAll )
-
-*/
+// This code is approached as if there are going to be multiple buttons and multiple ways ( queryselectorAll )
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]'); 
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
@@ -59,39 +52,39 @@ function closeModal(modal) {
 // Filter function on keywords
 // https://dev.to/michelc/search-and-filter-a-table-with-javascript-28mi
 
-(function filter() {
-  'use strict';
+(function () {
+  "use strict";
 
-
-  let TableFilter = (function() {
-    let array = Array.prototype;
-    let input;
+  let TableFilter = (function () {
+    let Arr = Array.prototype;
+    let search;
 
     function onInputEvent(e) {
-      input = e.target;
-      let table = document.getElementsByClassName(input.getAttribute('data-table'));
-      array.forEach.call(table, function(table) {
-        array.forEach.call(table.tBodies, function(tbody) {
-          array.forEach.call(tbody.rows, filter);
+      search = e.target.value.toLowerCase();
+      let tables = document.getElementsByClassName(e.target.getAttribute("data-table"));
+      Arr.forEach.call(tables, function (table) {
+        Arr.forEach.call(table.tBodies, function (tbody) {
+          Arr.forEach.call(tbody.rows, filter);
         });
       });
     }
 
     function filter(row) {
       let text = row.textContent.toLowerCase();
-      let val = input.value.toLowerCase();
-      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      row.style.display = text.indexOf(search) === -1 ? "none" : "table-row";
     }
 
     return {
-      init: function() {
+      init: function () {
         let inputs = document.getElementsByClassName('table-filter');
-        array.forEach.call(inputs, function(input) {
+        Arr.forEach.call(inputs, function(input) {
           input.oninput = onInputEvent;
+          if (input.value !== "") input.oninput({ target: input });
         });
       }
     };
 
   })();
- TableFilter.init();
+
+  TableFilter.init();
 })();

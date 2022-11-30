@@ -213,18 +213,8 @@ we want the tooltip to be next to the cursor, we add 15px. */
   })
 }
 showCommon();
-
-// All planets listed 
-
-function generatePlanets() {
   
-}
-generatePlanets();
 
-  // zoom functie 
-
-
-  
   /* END OF */
 }
 start();
