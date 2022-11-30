@@ -15,7 +15,6 @@
 ::selection {
   color: rgb(0, 0, 0);
   background: $color-alien;
-  background-image: none;
 }
 
 ::-webkit-scrollbar {
@@ -233,17 +232,6 @@ section {
   background-color: rgb(35, 35, 35);
   z-index: 0;
 }
-
-  #box {
-    background-color: $color-alien;
-    backdrop-filter: blur(1.5px);
-    border: 2px solid $color-alien;
-    margin: 1em;
-  }
-
-  #planetsAll {
-    z-index: 9999;
-  }
 
 footer {
   position: fixed;
