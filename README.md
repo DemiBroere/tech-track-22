@@ -1,7 +1,7 @@
 # NOT A SUNRISE, BUT A GALAXY RISE.
 Final assessment: tech track 2022
 
-## Contents 🔖
+## Contents 
 - Introduction
 - Demo
 - Getting started
