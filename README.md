@@ -14,12 +14,11 @@ The repository is a journey of the tech-track course 2022/2023.
 
 The goal is to create a data visualization based on your chosen API or data, using Javascript, D3, etc. We had to focus on architecture, visualization and/or storytelling. It was very open and free to choose what you'd like to do. I chose to go for the the more visualising and storytelling side. 
 
-More information about the tech-track course can be found [ here ](https://github.com/cmda-tt/course-22-23)
+You can find more information about the course [ here ](https://github.com/cmda-tt/course-22-23).
 
 ## Demo
 
 ![image](https://user-images.githubusercontent.com/90050856/204860004-172ad625-5073-4ec8-8bd0-d6495a205ec3.png)
-
 
 ## Getting started
 
@@ -28,7 +27,7 @@ More information about the tech-track course can be found [ here ](https://githu
 You need the following installed:
 - [ Vite ](https://vitejs.dev/)
 - [ NPM ](https://docs.npmjs.com/)
-- [ GIT ](https://git-scm.com/downloads) or [ Github Desktop ](https://desktop.github.com/).
+- [ GIT ](https://git-scm.com/downloads) or [ Github Desktop ](https://desktop.github.com/)
 
 ### Clone repository
 ```
