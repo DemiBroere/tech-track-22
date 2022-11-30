@@ -29,7 +29,7 @@ You need the following installed:
 
 ### Clone repository
 ```
-gh repo clone demibroere/tech-track-22\
+gh repo clone demibroere/tech-track-22/
 ```
 
 ### Install dependencies
