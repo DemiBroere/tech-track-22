@@ -193,12 +193,12 @@ button {
 	}
 
   circle:nth-of-type(even) {
-    animation: floatmore 8s ease-in-out infinite;
+    animation: float 10s ease-in-out infinite;
   }
   
 
 circle:nth-of-type(odd) {
-  animation: floatless 10s ease-in-out infinite; 
+  animation: floatmore 8s ease-in-out infinite; 
 }
 
 section {

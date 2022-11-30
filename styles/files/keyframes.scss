@@ -1,16 +1,16 @@
-@keyframes floatmore {
+@keyframes float {
     0% {
       transform: translatey(0px);
     }
     50% {
-      transform: translatey(-5px);
+      transform: translatey(-15px);
     }
     100% {
       transform: translatey(0px);
     }
   }  
 
-  @keyframes floatless {
+  @keyframes floatmore {
     0% {
       transform: translatey(0px);
     }

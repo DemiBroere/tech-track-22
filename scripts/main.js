@@ -2,154 +2,23 @@
 import CONFIG from '../scripts/config.js';
 import request from '../scripts/request.js';
 
-/* import makeHtml from '../scripts/make.js'; */ 
+/* IMPORTS */ 
 import '../styles/style.scss'
 import '../styles/popup.scss'
 import '../styles/starrynight.scss'
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+/* IMPORT */ 
+import '../scripts/cursorTracker.js'
+import '../scripts/popUp.js'
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
-import all from 'gsap/all';
 
 async function start() {
   const data = await request(CONFIG.url);
-
-// Cursor Tracker 
-
-const tracker = document.querySelector(".tracker"); // Selects the tracker from the css. 
-
-    document.body.addEventListener("mousemove", e => { // tells the tracker what to do as the mouse moves over the body. 
-      tracker.style.left = `${e.clientX}px`;
-      tracker.style.top = `${e.clientY}px`;
-    })
-
-// POP UP CODE 
-
-/* 
-
-This code is approached as if there are going to be multiple buttons and multiple ways ( queryselectorAll )
-
-*/
-
-const openModalButtons = document.querySelectorAll('[data-modal-target]'); 
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.getElementById('overlay'); // so you can show and hide the overlay
-
-/* 
-
-You want to loop over it and for that we use forEach. forEach() always returns undefined and is not chainable, 
-The forEach() method calls a function for each element in an array.
-
-*/
-
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Using the query selector to target #modal from the HTML
-    	const modal = document.querySelector(button.dataset.modalTarget);
-      openModal(modal);
-  })
-})
-
-overlay.addEventListener('click', () => {
-  const modal = document.querySelectorAll('.modal.active');
-  modal.forEach(modal => {
-    closeModal(modal);
-  })
-})
-
-/* 
-
-  The modal is not based off of the queryselector or based on the data attribute, instead you want to access the parent modal, 
-  because the modal is within the parent. You want to get the closest parent element, it checks the parents if any other parent 
-  has the .modal.
-
-*/
-
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    	const modal = button.closest('.modal');
-      closeModal(modal);
-  })
-})
-
-
-function openModal(modal) {
-  if (modal == null) return 
-  modal.classList.add('active');
-  overlay.classList.add('active');
-} 
-
-function closeModal(modal) {
-  if (modal == null) return 
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
-} 
-
-// Filter function on keywords
-// https://dev.to/michelc/search-and-filter-a-table-with-javascript-28mi
-
-(function filter() {
-  'use strict';
-
-
-  let TableFilter = (function() {
-    let array = Array.prototype;
-    let input;
-
-    function onInputEvent(e) {
-      input = e.target;
-      let table = document.getElementsByClassName(input.getAttribute('data-table'));
-      array.forEach.call(table, function(table) {
-        array.forEach.call(table.tBodies, function(tbody) {
-          array.forEach.call(tbody.rows, filter);
-        });
-      });
-    }
-
-    function filter(row) {
-      let text = row.textContent.toLowerCase();
-      let val = input.value.toLowerCase();
-      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-    }
-
-    return {
-      init: function() {
-        let inputs = document.getElementsByClassName('table-filter');
-        array.forEach.call(inputs, function(input) {
-          input.oninput = onInputEvent;
-        });
-      }
-    };
-
-  })();
- TableFilter.init();
-})();
-
-
-// this is the data I want to use within the tooltip, when hovering over a planet.
-
-const allPlanets = data.bodies.map(i => {
-    return {
-        englishName: i.englishName,
-        bodyType: i.bodyType,
-        gravity: i.gravity,
-        radius: i.equaRadius,
-        density: i.density,
-        discoveryDate: i.discoveryDate,
-        discoveredBy: i.discoveredBy
-    }
-}).filter (i => {
-    return i.bodyType === "Planet";
-  })
-
  
 /* 
-  First we select what we would like to return in the table alongside a filter, because we do not want to show everything. I filtered on
-  i.bodytype, because i wanted to be able to filter on the planets inside our solar system without selecting the moons and dwarfplanets. 
+  First we select what we would like to return in the table alongside a filter, because we do not want to show everything. I filtered on i.bodytype, because i wanted to be able to filter on the planets inside our solar system without selecting the moons and dwarfplanets. 
 */
 
   const allPlanetsTable = data.bodies.map(i => {
@@ -197,11 +66,24 @@ generateTable(allPlanetsTable);
 
 function showCommon() {
 
-  /* 
+  // this is the data I want to use within the tooltip, when hovering over a planet.
 
-   there was no data for the distances in the API, so I found my own data to use. Therefore there is a repetition of code. 
+  const allPlanets = data.bodies.map(i => {
+    return {
+        englishName: i.englishName,
+        bodyType: i.bodyType,
+        gravity: i.gravity,
+        radius: i.equaRadius,
+        density: i.density,
+        discoveryDate: i.discoveryDate,
+        discoveredBy: i.discoveredBy
+    }
+  }).filter (i => {
+    return i.bodyType === "Planet";
+  })
 
-*/
+
+//  there was no data for the distances in the API, so I found my own data to use. Therefore there is a repetition of code. 
 
 const planetData = [{
   // Mercury
