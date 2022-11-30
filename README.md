@@ -1,5 +1,4 @@
 # NOT A SUNRISE, BUT A GALAXY RISE.
-Final assessment: tech track 2022
 
 ## Contents 
 - Introduction
@@ -53,8 +52,10 @@ npm run dev
 ```
 
 copy paste the local url in your browser and you're running on local!
+
+Example:
 ```
-example ---> Local:   http://localhost:5173/
+Local:   http://localhost:5173/
 ```
 
 ## Documentation 
