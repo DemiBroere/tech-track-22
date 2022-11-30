@@ -1,5 +1,4 @@
 # NOT A SUNRISE, BUT A GALAXY RISE.
-Final assessment: tech track 2022
 
 ## Contents 
 - Introduction
@@ -18,6 +17,7 @@ You can find more information about the course [ here ](https://github.com/cmda-
 
 ## Demo
 
+You can checkout the demo [ here ](https://tech-track-22.vercel.app/)
 ![image](https://user-images.githubusercontent.com/90050856/204860004-172ad625-5073-4ec8-8bd0-d6495a205ec3.png)
 
 ## Getting started
@@ -53,12 +53,14 @@ npm run dev
 ```
 
 copy paste the local url in your browser and you're running on local!
+
+Example:
 ```
-example ---> Local:   http://localhost:5173/
+Local:   http://localhost:5173/
 ```
 
 ## Documentation 
-[ Process and journey can be found in my Wiki ](https://github.com/demibroere/tech-track-22/wiki)
+Process and journey can be found in my [ wiki ](https://github.com/demibroere/tech-track-22/wiki)
 
-## Authors 
+## Author
 **Author:** Demi Broere
