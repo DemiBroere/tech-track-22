@@ -18,6 +18,9 @@ More information about the tech-track course can be found [ here ](https://githu
 
 ## Demo
 
+![image](https://user-images.githubusercontent.com/90050856/204860004-172ad625-5073-4ec8-8bd0-d6495a205ec3.png)
+
+
 ## Getting started
 
 ### Installation repo
