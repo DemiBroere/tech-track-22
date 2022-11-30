@@ -17,6 +17,7 @@ You can find more information about the course [ here ](https://github.com/cmda-
 
 ## Demo
 
+You can checkout the demo [ here ](https://tech-track-22.vercel.app/)
 ![image](https://user-images.githubusercontent.com/90050856/204860004-172ad625-5073-4ec8-8bd0-d6495a205ec3.png)
 
 ## Getting started
