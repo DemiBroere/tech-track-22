@@ -3,7 +3,7 @@
       transform: translatey(0px);
     }
     50% {
-      transform: translatey(-15px);
+      transform: translatey(-15px); // moves the images up by -15px on the y-as ( vertically )
     }
     100% {
       transform: translatey(0px);
@@ -15,7 +15,7 @@
       transform: translatey(0px);
     }
     50% {
-      transform: translatey(-25px);
+      transform: translatey(-25px); // moves the images up by -25px on the y-as ( vertically )
     }
     100% {
       transform: translatey(0px);
@@ -23,12 +23,12 @@
   } 
 
 @keyframes move-twink-back {
-    from {background-position:0 0;}
+    from {background-position: 0 0;}
     to {background-position: 100% 100%;}
 }
 
 @keyframes move-clouds-back {
-    from {background-position:0 0;}
+    from {background-position: 0 0;}
     to {background-position: 200% 0;}
 }
 
